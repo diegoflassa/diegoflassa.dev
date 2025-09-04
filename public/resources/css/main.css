@@ -1,0 +1,36 @@
+/* Mobile-friendly overrides specific to this site */
+
+/* Ensure all images scale within their containers */
+img,
+.avatar img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve readability and layout on small screens */
+@media screen and (max-width: 768px) {
+  /* Avoid janky fixed backgrounds on mobile */
+  body {
+    background-attachment: scroll, scroll, scroll;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Slightly tighter tracking improves legibility on narrow viewports */
+  body, input, select, textarea {
+    letter-spacing: 0.1em;
+  }
+
+  /* Give icons comfortable tap targets and spacing */
+  ul.icons li {
+    padding: 0.5em 0.35em;
+  }
+
+  ul.icons li a {
+    width: 3.25em;
+    height: 3.25em;
+    line-height: 3.25em;
+  }
+}
+
+
