@@ -88,6 +88,7 @@
         </span>
         <h1>Diego Felipe Lassa</h1>
         <p>Desenvolvedor Android Senior</p>
+        <p><a href="./index.en.html" class="lang-switch" data-lang="en">English</a></p>
       </header>
 
       <footer>
@@ -131,11 +132,12 @@
     function onPageLoad() {
       var preferred = null;
       try { preferred = (localStorage.getItem('preferred_lang') || '').toLowerCase(); } catch(e) {}
-      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      var effective = preferred || lang;
-      if (effective && effective.indexOf('pt') !== 0) {
-        window.location.replace('./index.en.html');
-        return;
+      if (!preferred) {
+        var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (browserLang && browserLang.indexOf('pt') !== 0) {
+          window.location.replace('./index.en.html');
+          return;
+        }
       }
       console.log("Page Loaded");
       var easter_egg = new Konami();

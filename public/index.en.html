@@ -42,6 +42,7 @@
         </span>
         <h1>Diego Felipe Lassa</h1>
         <p>Senior Software Developer</p>
+        <p><a href="./index.html" class="lang-switch" data-lang="en">Portuguese</a></p>
       </header>
 
       <footer>
@@ -76,7 +77,9 @@
       window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
       document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
     }
-    function onPageLoad() {}
+    function onPageLoad() {
+      try { localStorage.setItem('preferred_lang', 'en'); } catch(e) {}
+    }
   </script>
 </body>
 
