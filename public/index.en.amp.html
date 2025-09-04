@@ -1,14 +1,16 @@
 <!doctype html>
-<html amp lang="pt-BR">
+<html amp lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Currículo • Diego Felipe Lassa</title>
-  <link rel="canonical" href="./resume.html">
+  <title>Identity by HTML5 UP</title>
+  <link rel="canonical" href="./index.en.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <meta name="description" content="Currículo de Diego Felipe Lassa – Desenvolvedor Android Sênior">
-  <link rel="alternate" href="./resume.html" hreflang="pt-BR" />
-  <link rel="alternate" href="./resume.en.html" hreflang="en" />
-  <link rel="alternate" href="./resume.html" hreflang="x-default" />
+  <meta name="description" content="Personal site of Diego Felipe Lassa">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <link rel="alternate" href="./index.html" hreflang="pt-BR" />
+  <link rel="alternate" href="./index.en.html" hreflang="en" />
+  <link rel="alternate" href="./index.html" hreflang="x-default" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -22,11 +24,12 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Diego Felipe Lassa",
-    "jobTitle": "Senior Android Developer",
-    "url": "https://diegoflassa-site.web.app/resume.amp.html",
+    "jobTitle": "Senior Software Developer",
+    "url": "https://diegoflassa-site.web.app/index.en.amp.html",
     "image": "https://diegoflassa-site.web.app/resources/images/avatar.jpg",
     "sameAs": [
       "https://github.com/diegoflassa",
+      "https://stackoverflow.com/users/167637/void",
       "https://www.linkedin.com/in/diegoflassa"
     ]
   }
@@ -49,19 +52,17 @@
   </noscript>
 
   <style amp-custom>
-    :root { --bg:#111; --fg:#f5f5f5; --muted:#bbb; }
-    html, body { height:100%; margin:0; background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif; }
+    :root { --bg:#111; --fg:#f5f5f5; --muted:#bbb; --accent:#00bcd4; }
+    html, body { height:100%; margin:0; background:var(--bg); color:var(--fg); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif; }
     #wrapper { min-height:100%; display:flex; flex-direction:column; }
-    #main { flex:1 0 auto; display:flex; align-items:center; justify-content:center; padding:2rem 1rem; }
-    header { text-align:center; }
+    #main { flex:1 0 auto; display:flex; align-items:center; justify-content:center; padding:2rem 1rem; text-align:center; }
     header .avatar { display:inline-block; margin-bottom:1rem; border-radius:100%; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,0.5); }
-    h1 { font-size:1.8rem; margin:0.25rem 0 0.25rem; }
-    p { margin:0.25rem 0; color:var(--muted); }
-    h2 { margin-top:1.5rem; }
-    ul { margin-top:0.5rem; }
+    h1 { font-size:2rem; margin:0.25rem 0 0.25rem; }
+    p { margin:0; color:var(--muted); }
     footer#footer { flex-shrink:0; padding:1rem 0 2rem; text-align:center; color:var(--muted); }
     ul.icons { list-style:none; padding:0; margin:1.25rem 0 0; display:flex; gap:1rem; justify-content:center; }
     ul.icons a { color:var(--fg); text-decoration:none; border:1px solid rgba(255,255,255,0.2); padding:0.5rem 0.75rem; border-radius:999px; }
+    ul.copyright { list-style:none; padding:0; margin:0.5rem 0 0; }
   </style>
 </head>
 <body>
@@ -69,18 +70,18 @@
     <section id="main">
       <header>
         <span class="avatar">
-          <amp-img src="./resources/images/avatar.jpg" width="160" height="160" alt="Avatar de Diego Felipe Lassa" layout="fixed"></amp-img>
+          <amp-img src="./resources/images/avatar.jpg" width="160" height="160" alt="Avatar" layout="fixed"></amp-img>
         </span>
         <h1>Diego Felipe Lassa</h1>
-        <p>Senior Android Developer</p>
-        <p>
-          <a href="mailto:diegoflassa@gmail.com">diegoflassa@gmail.com</a> ·
-          <a href="tel:+5519994960948">(19) 99496-0948</a> ·
-          <a href="https://linkedin.com/in/diegoflassa">LinkedIn</a> ·
-          <a href="https://github.com/diegoflassa">GitHub</a>
-        </p>
+        <p>Senior Software Developer</p>
       </header>
-
+      <footer>
+        <ul class="icons">
+          <li><a href="./resume.en.html">Resume</a></li>
+          <li><a href="https://github.com/diegoflassa">Github</a></li>
+          <li><a href="https://stackoverflow.com/users/167637/void">Stack Overflow</a></li>
+        </ul>
+      </footer>
     </section>
 
     <footer id="footer">

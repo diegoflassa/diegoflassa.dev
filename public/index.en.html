@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Title & Metadata -->
+  <title>Identity by HTML5 UP</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal site of Diego Felipe Lassa" />
+  <meta name="robots" content="index, follow"/>
+  <meta name="googlebot" content="index, follow"/>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Locale alternates -->
+  <link rel="alternate" href="./index.html" hreflang="pt-BR" />
+  <link rel="alternate" href="./index.en.html" hreflang="en" />
+  <link rel="alternate" href="./index.html" hreflang="x-default" />
+
+  <!-- CSSs -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./resources/css/main.css" />
+  <link rel="amphtml" href="./index.en.amp.html" />
+</head>
+
+<body class="is-loading" onload="onPageLoad()">
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Main -->
+    <section id="main">
+      <header>
+        <span class="avatar">
+          <img src="./resources/images/avatar.jpg" alt="" />
+        </span>
+        <h1>Diego Felipe Lassa</h1>
+        <p>Senior Software Developer</p>
+      </header>
+
+      <footer>
+        <ul class="icons">
+          <li>
+            <a href="./resume.en.html" class="fa-file-text">Resume</a>
+          </li>
+          <li>
+            <a href="https://github.com/diegoflassa" class="fa-github">Github</a>
+          </li>
+          <li>
+            <a href="https://stackoverflow.com/users/167637/void" class="fa-stack-overflow">Stack Overflow</a>
+          </li>
+        </ul>
+      </footer>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="copyright">
+        <li>&copy; Diego Felipe Lassa</li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script>
+    if ('addEventListener' in window) {
+      window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+      document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+    function onPageLoad() {}
+  </script>
+</body>
+
+</html>
+
+
