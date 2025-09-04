@@ -87,7 +87,7 @@
           <img src="./resources/images/avatar.jpg" alt="" />
         </span>
         <h1>Diego Felipe Lassa</h1>
-        <p>Senior Software Developer</p>
+        <p>Desenvolvedor Android Senior</p>
       </header>
 
       <footer>
@@ -100,6 +100,9 @@
           </li>
           <li>
             <a href="https://stackoverflow.com/users/167637/void" class="fa-stack-overflow">Stack Overflow</a>
+          </li>
+          <li>
+            <a href="./index.en.html" class="fa-language lang-switch" data-lang="en">English</a>
           </li>
         </ul>
       </footer>
@@ -126,6 +129,14 @@
     }
 
     function onPageLoad() {
+      var preferred = null;
+      try { preferred = (localStorage.getItem('preferred_lang') || '').toLowerCase(); } catch(e) {}
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var effective = preferred || lang;
+      if (effective && effective.indexOf('pt') !== 0) {
+        window.location.replace('./index.en.html');
+        return;
+      }
       console.log("Page Loaded");
       var easter_egg = new Konami();
       easter_egg.code = function () { myEasterEgg(); };
