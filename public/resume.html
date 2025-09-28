@@ -30,6 +30,154 @@
 
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="./resources/css/main.css" />
+  <style>
+    #main {
+      max-width: 210mm; /* A4 width */
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      color: #333;
+    }
+    
+    /* Section dividers */
+    .section-divider {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, #00bcd4, #2196f3);
+      margin: 2rem 0;
+    }
+    
+    /* Job entries styling */
+    .job-entry {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-left: 4px solid #00bcd4;
+      background: #f8f9fa;
+      border-radius: 0 8px 8px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .job-entry:nth-child(even) {
+      background: #f0f8ff;
+      border-left-color: #2196f3;
+    }
+    
+    .job-entry:hover {
+      transform: translateX(5px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Job titles */
+    .job-title {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #1976d2;
+      margin-bottom: 0.5rem;
+    }
+    
+    .job-company {
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #424242;
+    }
+    
+    .job-period {
+      color: #666;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+    
+    /* Skills grouping */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .skill-category {
+      background: #e3f2fd;
+      padding: 1rem;
+      border-radius: 6px;
+      border-left: 4px solid #2196f3;
+    }
+    
+    .skill-category h4 {
+      margin: 0 0 0.5rem 0;
+      color: #1976d2;
+      font-size: 1em;
+    }
+    
+    /* Contact icons */
+    .contact-info a {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #1976d2;
+    }
+    
+    .contact-info a:before {
+      content: "📧";
+      margin-right: 0.5rem;
+    }
+    
+    .contact-info a[href^="tel:"]:before {
+      content: "📱";
+    }
+    
+    .contact-info a[href*="linkedin"]:before {
+      content: "💼";
+    }
+    
+    .contact-info a[href*="github"]:before {
+      content: "💻";
+    }
+    
+    /* Section headers */
+    h2 {
+      color: #1976d2;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+    
+    /* Download button */
+    .download-btn {
+      background: #1976d2;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1rem 0;
+      transition: background 0.3s ease;
+    }
+    
+    .download-btn:hover {
+      background: #1565c0;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      #main {
+        margin: 0;
+        padding: 1rem;
+        border-radius: 0;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .job-entry {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body class="is-loading" onload="onPageLoad()">
@@ -41,12 +189,13 @@
         </span>
         <h1>Diego Felipe Lassa</h1>
         <p>Desenvolvedor Android Senior</p>
-        <p>
-          <a href="mailto:diegoflassa@gmail.com">diegoflassa@gmail.com</a> ·
-          <a href="tel:+5519994960948">(19) 99496-0948</a> ·
-          <a href="https://linkedin.com/in/diegoflassa" target="_blank" rel="noopener">LinkedIn</a> ·
+        <div class="contact-info">
+          <a href="mailto:diegoflassa@gmail.com">diegoflassa@gmail.com</a>
+          <a href="tel:+5519994960948">(19) 99496-0948</a>
+          <a href="https://linkedin.com/in/diegoflassa" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/diegoflassa" target="_blank" rel="noopener">GitHub</a>
-        </p>
+        </div>
+        <a href="./resume.html" class="download-btn" onclick="window.print()">📄 Imprimir PDF</a>
       </header>
 
       <hr />
@@ -54,30 +203,68 @@
       <h2>Resumo Profissional</h2>
       <p>Desenvolvedor Android Sênior com mais de 15 anos de experiência em tecnologia, especializado em arquiteturas escaláveis (MVVM, MVI, KMP) e desenvolvimento nativo com Kotlin, Jetpack Compose e XML. Paixão por transformar desafios complexos em soluções inovadoras, comprovado pela liderança na modernização de UI e otimização de operações logísticas que resultaram em 40% menos código e 35% menos tempo de desenvolvimento nos Apps. Busco aplicar minha expertise em Clean Code, testes e colaboração para impulsionar o sucesso de equipes e produtos de ponta.</p>
 
+      <hr class="section-divider" />
+      
+      <h2>Principais Conquistas</h2>
+      <ul>
+        <li>🚀 <strong>40% redução de código</strong> com implementação do Jetpack Compose</li>
+        <li>⚡ <strong>35% menos tempo de desenvolvimento</strong> com Design System próprio</li>
+        <li>🤖 <strong>60% redução no tempo de identificação</strong> com App de IA para classificação</li>
+        <li>📱 <strong>45% redução de codebase</strong> explorando Kotlin Multiplatform</li>
+        <li>🏆 <strong>15+ anos de experiência</strong> em desenvolvimento mobile e desktop</li>
+      </ul>
+
+      <hr class="section-divider" />
+      
       <h2>Habilidades Técnicas</h2>
-      <ul>
-        <li><strong>Linguagens</strong>: Kotlin, Java</li>
-        <li><strong>Frameworks/Bibliotecas</strong>: Android SDK, Jetpack Compose, XML, Retrofit, Room, Hilt, Kotlin Multiplatform (KMP), LiveData, Coroutines, Navigation Component</li>
-        <li><strong>Arquitetura</strong>: MVVM, MVI, Clean Architecture, Orientação a Objetos (OOP)</li>
-        <li><strong>Ferramentas/Plataformas</strong>: Android Studio, Git, GitHub, GitLab, Jenkins, Firebase, Jira, Confluence, UML, Postman</li>
-        <li><strong>Metodologias & Práticas</strong>: Scrum, Clean Code, Orientação a Objetos, Modelagem</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>📱 Desenvolvimento Mobile</h4>
+          <p>Kotlin, Java, Android SDK, Jetpack Compose, XML</p>
+        </div>
+        <div class="skill-category">
+          <h4>🏗️ Arquitetura</h4>
+          <p>MVVM, MVI, Clean Architecture, OOP</p>
+        </div>
+        <div class="skill-category">
+          <h4>🔧 Frameworks</h4>
+          <p>Retrofit, Room, Hilt, KMP, LiveData, Coroutines</p>
+        </div>
+        <div class="skill-category">
+          <h4>🛠️ Ferramentas</h4>
+          <p>Android Studio, Git, Firebase, Jira, UML</p>
+        </div>
+        <div class="skill-category">
+          <h4>📋 Metodologias</h4>
+          <p>Scrum, Clean Code, Modelagem</p>
+        </div>
+      </div>
 
+      <hr class="section-divider" />
+      
       <h2>Experiência Profissional</h2>
-      <h3><a href="https://www.havan.com.br/" target="_blank" rel="noopener">HAVAN</a> – Senior Android Developer <small>(Ago 2021 – Jun 2025)</small></h3>
-      <ul>
-        <li>Liderança na implementação do Jetpack Compose para modernização da UI, reduzindo o código dos apps em 40% e melhorando a manutenibilidade.</li>
-        <li>Criação de uma Biblioteca de Componentes do Design System (Compose e XML), diminuindo o tempo de desenvolvimento em 35% e garantindo uma interface coesa em todos os apps.</li>
-        <li>Condução de POCs com Kotlin Multiplatform (KMP), explorando unificação de codebase de apps Android e Desktop, reduzindo o código em 45%.</li>
-        <li>Desenvolvimento de App de classificação de produtos com IA, reduzindo o tempo de identificação em 60%.</li>
-      </ul>
+      <div class="job-entry">
+        <div class="job-title">Senior Android Developer</div>
+        <div class="job-company"><a href="https://www.havan.com.br/" target="_blank" rel="noopener">HAVAN</a></div>
+        <div class="job-period">Ago 2021 – Jun 2025</div>
+        <ul>
+          <li>Liderança na implementação do Jetpack Compose para modernização da UI, reduzindo o código dos apps em 40% e melhorando a manutenibilidade.</li>
+          <li>Criação de uma Biblioteca de Componentes do Design System (Compose e XML), diminuindo o tempo de desenvolvimento em 35% e garantindo uma interface coesa em todos os apps.</li>
+          <li>Condução de POCs com Kotlin Multiplatform (KMP), explorando unificação de codebase de apps Android e Desktop, reduzindo o código em 45%.</li>
+          <li>Desenvolvimento de App de classificação de produtos com IA, reduzindo o tempo de identificação em 60%.</li>
+        </ul>
+      </div>
 
-      <h3>Programador Freelancer – D’Lassa <small>(Abr 2019 – Ago 2021)</small></h3>
-      <ul>
-        <li>Desenvolvimento de aplicativos Android sob demanda.</li>
-        <li>Projetos entregues incluem LittleDropsOfRain e The Heroesbook.</li>
-        <li>Atuação autônoma e versátil com foco em soluções escaláveis.</li>
-      </ul>
+      <div class="job-entry">
+        <div class="job-title">Programador Freelancer</div>
+        <div class="job-company">D'Lassa</div>
+        <div class="job-period">Abr 2019 – Ago 2021</div>
+        <ul>
+          <li>Desenvolvimento de aplicativos Android sob demanda.</li>
+          <li>Projetos entregues incluem LittleDropsOfRain e The Heroesbook.</li>
+          <li>Atuação autônoma e versátil com foco em soluções escaláveis.</li>
+        </ul>
+      </div>
 
       <h3>Especialista Android – <a href="https://www.venturus.org.br/" target="_blank" rel="noopener">Venturus</a> <small>(Jul 2018 – Mar 2019)</small></h3>
       <ul>
